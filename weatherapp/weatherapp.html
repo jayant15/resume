@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><body ng-app="WeatherApp">
+<!-- adds with angular the app -->
+
+<div class="container" style="background-color: #161616;" ng-controller="MainCtrl">
+    <div class="row">
+        <div class="text-center jumbotron">
+            <h1><span class="glyphicon glyphicon-cloud"></span>| Weather App |<span class="glyphicon glyphicon-tint"></span></h1>
+        </div>
+
+        <!-- Data output of selected location-->
+        <div class="col-xs-8 col-xs-offset-2">
+            <div class="text-center status">
+                <p><span class="glyphicon glyphicon-map-marker"></span>: {{Data.city}}, {{Data.regionName}}, {{Data.country}}</p>
+                <p><span class="glyphicon glyphicon-info-sign"></span>: {{Data.des}} - {{Data.desc}}</p>
+                <p>{{Data.temp}} &#176;<span class="temp" ng-click="Data.sys()">{{Data.unit}}</span></p>
+                <p>Windspeed: {{Data.temp_min}} meters/s</p>
+            </div>
+
+            <!-- depenting on the weather the icon-->
+            <div class="text-center all-icon">
+                <div class="icon sun-shower hide ">
+                    <div class="cloud"></div>
+                    <div class="sun">
+                        <div class="rays"></div>
+                    </div>
+                    <div class="rain"></div>
+                </div>
+                <div class="icon thunder-storm hide thunderstom">
+                    <div class="cloud"></div>
+                    <div class="lightning">
+                        <div class="bolt"></div>
+                        <div class="bolt"></div>
+                    </div>
+                </div>
+                <div class="icon cloudy hide clouds">
+                    <div class="cloud"></div>
+                    <div class="cloud"></div>
+                </div>
+                <div class="icon flurries hide snow">
+                    <div class="cloud"></div>
+                    <div class="snow">
+                        <div class="flake"></div>
+                        <div class="flake"></div>
+                    </div>
+                </div>
+                <div class="icon sunny hide clear">
+                    <div class="sun">
+                        <div class="rays"></div>
+                    </div>
+                </div>
+                <div class="icon rainy hide rain">
+                    <div class="cloud"></div>
+                    <div class="rain"></div>
+                </div>
+            </div>
+
+            <p class="text-center">Weather icons from <a href="#" target="_blank">widget weather</a>& reviewed code/understanding from freecodecamp</p>
+        </div>
+    </div>
+</div>
+</body>
+
+</body>
+</html>
